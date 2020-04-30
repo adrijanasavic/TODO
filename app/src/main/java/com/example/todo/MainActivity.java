@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+
+import com.example.todo.dialog.AboutDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private RelativeLayout drawerPane;
     private ActionBarDrawerToggle drawerToggle;
 
+    private AlertDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 2:
                         title = "About";
+                        showDialog();
                         break;
 
                 }
@@ -105,5 +110,16 @@ public class MainActivity extends AppCompatActivity {
             actionBar.setHomeButtonEnabled( true );
             actionBar.show();
         }
+    }
+
+    private void showDialog() {
+        if (dialog == null) {
+            dialog = new AboutDialog( MainActivity.this ).prepareDialog();
+        } else {
+            if (dialog.isShowing()) {
+                dialog.dismiss();
+            }
+        }
+        dialog.show();
     }
 }
