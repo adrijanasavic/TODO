@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.example.todo.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.preference.PreferenceManager;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+
+import com.example.todo.R;
 
 import java.io.IOException;
 import java.io.InputStream;

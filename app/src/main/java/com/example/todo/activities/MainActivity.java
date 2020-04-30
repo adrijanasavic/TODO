@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.example.todo.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -32,6 +32,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.todo.R;
+import com.example.todo.adapters.MyAdapter;
 import com.example.todo.db.DatabaseHelper;
 import com.example.todo.db.model.Grupa;
 import com.example.todo.dialog.AboutDialog;

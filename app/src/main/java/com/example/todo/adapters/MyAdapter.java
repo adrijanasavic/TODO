@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.example.todo.adapters;
 
 import android.os.Build;
 import android.view.LayoutInflater;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.todo.R;
 import com.example.todo.db.model.Grupa;
 
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate( R.layout.single_item, parent, false);
 
 
         return new MyAdapter.MyViewHolder(view, listener);

@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.example.todo.activities;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -37,6 +37,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.preference.PreferenceManager;
 
+import com.example.todo.R;
 import com.example.todo.db.DatabaseHelper;
 import com.example.todo.db.model.Grupa;
 
@@ -82,7 +83,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        setContentView( R.layout.activity_detail);
 
         setupToolbar();
         fillData();
@@ -90,7 +91,7 @@ public class DetailActivity extends AppCompatActivity {
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-        position=getIntent().getExtras().getInt(MainActivity.GRUPA_KEY);
+        position=getIntent().getExtras().getInt( MainActivity.GRUPA_KEY);
 
         showGrupaDetails();
 

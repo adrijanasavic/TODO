@@ -1,4 +1,4 @@
-package com.example.todo;
+package com.example.todo.activities;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
@@ -6,6 +6,8 @@ import android.preference.PreferenceFragment;
 import android.view.MenuItem;
 
 import androidx.core.app.NavUtils;
+
+import com.example.todo.R;
 
 
 public class SettingActivity extends PreferenceActivity {
@@ -36,7 +38,7 @@ public class SettingActivity extends PreferenceActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-            addPreferencesFromResource(R.xml.preferences);
+            addPreferencesFromResource( R.xml.preferences);
         }
     }
 
