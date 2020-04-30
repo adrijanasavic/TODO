@@ -26,7 +26,7 @@ public class SplashScreen extends Activity  {
         super.onCreate( savedInstanceState );
 
         prefs = PreferenceManager.getDefaultSharedPreferences( this );
-        splash = prefs.getBoolean( getString( R.string.splash_key ), true );
+        splash = prefs.getBoolean( getString( R.string.splash_key ), false );
 
         if (splash) {
             setContentView( R.layout.splash_screen );
